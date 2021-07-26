@@ -31,7 +31,6 @@ pipeline
     {
       steps
       {
-        
         sh 'scp -i ${SSH_PRIVATE_KEY} ${JENKINS_WAR_PATH} ${TOMCAT_WAR_PATH}'
       } 
     }    
