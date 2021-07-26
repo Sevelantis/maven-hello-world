@@ -24,6 +24,7 @@ pipeline
     {
       steps
       {
+        sh 'pwd'
         sh '. /var/jenkins_home/ssh_auth.sh'
       }
     }
