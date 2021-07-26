@@ -16,7 +16,7 @@ pipeline
       steps
       {
         sh 'pwd'
-        sh 'mvn clean package war:war --settings .mvn/wrapper/settings.xml'
+        sh 'mvn clean package war:war'
       } 
     }
     
