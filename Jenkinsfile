@@ -20,30 +20,20 @@ pipeline
       } 
     }
     
-    stage("ssh-auth-tomcat")
+    stage("ssh authentication tomcat")
     {
       steps
       {
         sh '. /var/jenkins_home/ssh_auth.sh'
       }
     }
-    stage("send .war")
+    stage("send && deploy .war")
     {
       steps
       {
         
         sh 'scp -i ${PRIVATE_KEY} ${JENKINS_WAR_PATH} ${TOMCAT_WAR_PATH}'
-        
       } 
-    }
-    
-    stage("deploy")
-    {
-      steps
-      {
-        echo 'deploying the appplication'
-      } 
-    }
-    
+    }    
   }
 }
