@@ -5,7 +5,7 @@ pipeline
   environment
   {
     PRIVATE_KEY = "${env.HOME}/.ssh/tomcat_key"
-    JENKINS_WAR_PATH = "${env.WORKSPACE}/target/apigenerator-0.0.1-SNAPSHOT.war"
+    JENKINS_WAR_PATH = "${env.WORKSPACE}/target/*.war"
     TOMCAT_WAR_PATH = 'jenkins_user@tomcat:/usr/local/tomcat/webapps'
   }
   
